@@ -86,7 +86,7 @@ app.get('/products', (req, res) => {
 
 app.get('/help/*', (req, res) => {
     res.render("404", {
-        errorMessage: 'The artcles you are looking for was not found.'
+        errorMessage: 'The artcles you are looking for.'
     })
 })
 
