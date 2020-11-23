@@ -9,7 +9,8 @@ const forecast = (latitude, longitude, callback) => {
         }else if(body.cod !== 200){
             callback('Location not found. Try again with different location please!', undefined)
         }else{
-            callback(undefined, 'The weather in ' + body.name + ' is ' +  body.weather[0].description +  ' with temperature ' + body.main.temp)
+            callback(undefined, 'The weather in ' + body.name + ' is ' +  body.weather[0].description +  ' with temperature ' + body.main.temp + 
+            ', the wind will be ' + body.wind.speed + ' m/s and humidity ' + body.main.humidity + '%') 
         }
     })
 }
