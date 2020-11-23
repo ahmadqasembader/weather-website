@@ -7,7 +7,7 @@ const forecast = (latitude, longitude, callback) => {
         if(error){
             callback('unable to reach the forecast service!', undefined)
         }else if(body.cod !== 200){
-            callbacl('Location not found. Try again with different location please!', undefined)
+            callback('Location not found. Try again with different location please!', undefined)
         }else{
             callback(undefined, 'The weather in ' + body.name + ' is ' +  body.weather[0].description +  ' with temperature ' + body.main.temp)
         }
